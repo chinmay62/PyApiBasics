@@ -15,13 +15,13 @@ class Test_Get:
     @pytest.mark.order(1)
     @pytest.mark.setup
     def test_setup_001(self):
-        expected = 3.10
-        actual = float(".".join(sys.version.split(sep=" ")[0].split(sep=".")[:2]))
-        assert actual >= expected, "Invalid Python version"
+        _expected = 3.10
+        _actual = float(".".join(sys.version.split(sep=" ")[0].split(sep=".")[:2]))
+        assert _actual >= _expected, "Invalid Python version"
 
     @pytest.mark.order(2)
     @pytest.mark.setup
     def test_setup_002(self):
-        expected = "PYAPIBASICS"
-        actual = self.config.get_project_name()
-        assert expected == actual, "Could not find the config file."
+        _expected = "PYAPIBASICS"
+        _actual = self.config.get_project_name()
+        assert _expected == _actual, "Could not find the config file."

@@ -1,6 +1,6 @@
 # PyApiBasics
 
-## Introduction
+## About
 This Python-based test automation project aims to provide the user with the boilerplate code for a test harness and a few sample test cases for RESTful APIs.  The harness utilizes the powerful yet easy-to-use and versatile test framework - PyTest.
 
 The tests perform actions on https://reqres.in - a great free API testing website
@@ -23,4 +23,4 @@ Once the setup tests pass, the API tests can be run using the following commands
 |```pytest```|Runs all tests|
 |```pytest -m get```|Run all tests for the GET method (retrieve record)|
 |```pytest -m post```|Run all tests for the POST method (create record)|
-|```pytest -m get```|Run all tests for the DELETE method (delete record|
+|```pytest -m get```|Run all tests for the DELETE method (delete record)|

@@ -27,17 +27,17 @@ class Test_Get:
     @pytest.mark.order(102)
     @pytest.mark.get
     def test_get_002(self):
-        expected_fn = "Janet"
+        _expected_fn = "Janet"
         _endpoint = f"{self.config.get_base_url()}/api/users/2"
         _response = self.api.api_get(endpoint=_endpoint)
         assert (
             _response.status_code == api_response_codes.OK
         ), f"Invalid response code.  Expecting {api_response_codes.OK}, received {_response.status_code}."
         _response_json = json.loads(_response.text)
-        actual = _response_json["data"]["first_name"]
+        _actual = _response_json["data"]["first_name"]
         assert (
-            expected_fn == actual
-        ), f"Incorrect data in response.  Expected {expected_fn}, actual {actual}."
+            _expected_fn == _actual
+        ), f"Incorrect data in response.  Expected {_expected_fn}, actual {_actual}."
 
     @pytest.mark.order(103)
     @pytest.mark.get
