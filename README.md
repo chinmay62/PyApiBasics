@@ -22,4 +22,6 @@ Once the setup tests pass, the API tests can be run using the following commands
 |```pytest```|Runs all tests|
 |```pytest -m get```|Run all tests for the GET method (retrieve record)|
 |```pytest -m post```|Run all tests for the POST method (create record)|
-|```pytest -m get```|Run all tests for the DELETE method (delete record)|
+|```pytest -m delete```|Run all tests for the DELETE method (delete record)|
+|```pytest -m put```|Run all tests for the PUT method (update record)|
+|```pytest -m patch```|Run all tests for the PATCH method (update record)|
