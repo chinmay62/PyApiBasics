@@ -7,6 +7,7 @@ Date: 04/2024
 import pytest
 from libs import config_ops
 import sys
+from libs import *
 
 
 class Test_Get:
@@ -24,4 +25,5 @@ class Test_Get:
     def test_setup_002(self):
         _expected = "PYAPIBASICS"
         _actual = self.config.get_project_name()
+        wait(timeout="3s")  # Just showing off :)
         assert _expected == _actual, "Could not find the config file."

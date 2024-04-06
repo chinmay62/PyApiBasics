@@ -11,7 +11,7 @@ import string
 import time
 import base64
 from config.constants import file_encoding
-from datetime import datetime
+from datetime import datetime, timezone
 from libs.config_ops import config_operations
 
 
@@ -47,7 +47,7 @@ def wait(timeout: str) -> None:
 
 
 def get_current_date_time():
-    return datetime.now().strftime("%Y%m%d%H%M%S")
+    return datetime.now(timezone.utc).strftime("%FT%T")
 
 
 def get_base64_encoded_string(text: str) -> str:
