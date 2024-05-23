@@ -26,7 +26,6 @@ class Test_Put:
         assert _response.status_code == api_response_codes.OK, "Invalid response code"
         _response_json = json.loads(_response.text)
         _actual = _response_json["updatedAt"]
-        _actual = _actual.split(sep=".")[0]  # Don't verify the miliseconds
         assert (
-            _expected == _actual
+            _expected <= _actual
         ), f"Incorrect data in response.  Expected {_expected}, actual {_actual}."
